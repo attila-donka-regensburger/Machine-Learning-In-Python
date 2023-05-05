@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 2rem;
+}
+
+h1 {
+    padding-left: 10%;
+}
+
+.gray {
+    padding: 1rem;
+    padding-left: 2rem;
+    color: rgb(0, 54, 0);
+    background-color: gray;
+}
+
+.green {
+    padding: 1rem;
+    padding-left: 2rem;
+    color: gray;
+    background-color:  rgb(0, 54, 0);
+}
+
+.gray strong {
+    text-shadow: 0.1px 0.1px;
+}
