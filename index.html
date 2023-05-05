@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Machine Learning strategies notes</h1>
+    <section class="gray">
+        <ul>
+            <li>Numerical: discrete data, continues data</li>
+            <li>Categorical: not measurable values</li>
+            <li>Ordinal: measurable values</li>
+        </ul>
+    </section>
+    <section class="green">
+        <ul>
+            <li>Mean: is the average value <pre><code>import numpy
+            numpy.mean()
+            </code></pre></li>
+            <li>Median: the middle value <pre><code>import numpy
+            numpy.median()
+            </code></pre></li>
+            <li>Mode: the most common item <pre><code>from scipy import stats
+            stats.mode()
+            </code></pre></li>
+        </ul>
+    </section>
+    <section class="gray"><p><strong>Standard Deviation σ</strong></p>
+        <p>A low standard deviation means that most of the numbers are close to the mean (average) value.</p>
+        <p>A high standard deviation means that the values are spread out over a wider range.</p>
+        <p><pre><code>import numpy
+        numpy.std()
+        </code></pre></p>
+        <p><strong>Variance σ2</strong></p>
+        <p>Take the square root of the variance, you get the standard deviation (absolute value).</p>
+        <p>Variance = multiply the standard deviation by itself</p>
+        <p><pre><code>import numpy
+        numpy.var()
+        </code></pre></p>
+    </section>
+    <section class="green">
+        <p><strong>Percentiles</strong></p>
+        <p>The value that a given percent of the values are lower than.</p>
+        <p><pre><code>import numpy
+        numpy.percentile(array, 50)
+    #50% is 50, array is array = [...]
+        </code></pre></p>
+    </section>
+    <section class="gray">
+        <h2>Data Distribution</h2>
+        <p><strong>Big Data</strong></p>
+        <p><pre><code>
+            import numpy
+
+            x = numpy.random.uniform(0.0, 1.0, 32767)
+            
+            print(x) 
+        </code></pre></p>
+        <p>Histogram</p>
+        <p><pre><code>
+            import numpy
+            import matplotlib.pyplot as plt
+            
+            x = numpy.random.uniform(0.0, 5.0, 250)
+            
+            plt.hist(x, 5)
+            plt.show()
+            
+            #---- or -----
+            #Three lines to make our compiler able to draw:
+            import sys
+            import matplotlib
+            matplotlib.use('Agg') #Pandas DataFrame methode: agg
+
+            import numpy
+            import matplotlib.pyplot as plt
+
+            x = numpy.random.uniform(0.0, 1.0, 128)
+
+            plt.hist(x, 5)
+            plt.show()
+
+            #Two  lines to make our compiler able to draw:
+            plt.savefig(sys.stdout.buffer)
+            sys.stdout.flush()
+
+            #---- a little bigger ----#
+
+            #Three lines to make our compiler able to draw:
+            import sys
+            import matplotlib
+            matplotlib.use('Agg')
+
+            import numpy
+            import matplotlib.pyplot as plt
+
+            x = numpy.random.uniform(0.0, 5.0, 100000)
+
+            plt.hist(x, 100)
+            plt.show()
+
+            #Two  lines to make our compiler able to draw:
+            plt.savefig(sys.stdout.buffer)
+            sys.stdout.flush()
+        </code></pre></p>
+    </section>
+    <section class="green">
+
+
+    </section>
+</body>
+</html>
